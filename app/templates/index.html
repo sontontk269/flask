@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Google Maps JavaScript API Example</title>
+    <style>
+      #map {
+        height: 400px;
+        width: 100%;
+      }
+    </style>
+    <script
+      async
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAid8qgyZORO_4JdIviZleNJbCIBfs8mVI&callback=initMap"
+    ></script>
+    <script src="../static/js/index.js"></script>
+  </head>
+  <body onload="initMap()">
+    <!-- SIGN IN OAUTH2 -->
+    <div class="oauth-box">
+      <div id="oauth-google">
+        <a href="{{ url_for('google_login') }}">
+          <img
+            src="{{ url_for('static', filename='../static/images/google-logo.png') }}"
+            width="55px"
+            height="55px"
+            alt="Google logo"
+          />
+        </a>
+      </div>
+    </div>
+
+    <!-- render map  -->
+
+    <div id="map"></div>
+  </body>
+</html>
